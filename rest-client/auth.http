@@ -3,6 +3,15 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "username": "usuario8",
-  "password": "Contrasenia"
+  "username": "usuario133",
+  "password": "Contrasenia1"
+}
+
+### signin
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "username": "usuario13",
+  "password": "Contrasenia1"
 }
