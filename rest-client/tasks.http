@@ -1,0 +1,41 @@
+### GET ALL TASKS
+GET http://localhost:3000/tasks
+
+### GET ALL TASKS with filters status
+GET http://localhost:3000/tasks?status=IN_PROGRESS
+
+### GET ALL TASKS with filters search
+GET http://localhost:3000/tasks?search=1
+
+### GET TASK By ID
+GET http://localhost:3000/tasks/d2eba71d-4b6e-4af0-af08-5c668e3f4a65
+
+### POST TASK
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "User name",
+  "description": "User email",
+  "banana": "User email"
+}
+
+### POST TASK
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Cook Dinner",
+  "description": "include lots of vegetables"
+}
+
+### Detete TASK By ID
+DELETE http://localhost:3000/tasks/12345
+
+### Patch TASK By ID
+PATCH http://localhost:3000/tasks/d2eba71d-4b6e-4af0-af08-5c668e3f4a65/status
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS"
+}
