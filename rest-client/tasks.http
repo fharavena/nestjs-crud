@@ -2,13 +2,13 @@
 GET http://localhost:3000/tasks
 
 ### GET ALL TASKS with filters status
-GET http://localhost:3000/tasks?status=IN_PROGRESS
+GET http://localhost:3000/tasks?status=OPEN
 
-### GET ALL TASKS with filters search
-GET http://localhost:3000/tasks?search=1
+### GET ALL TASKS with both filters
+GET http://localhost:3000/tasks?status=OPEN&search=email
 
 ### GET TASK By ID
-GET http://localhost:3000/tasks/d2eba71d-4b6e-4af0-af08-5c668e3f4a65
+GET http://localhost:3000/tasks/ab67d658-2257-44ae-bfa8-a6709be3d7f6
 
 ### POST TASK
 POST http://localhost:3000/tasks
@@ -29,13 +29,13 @@ Content-Type: application/json
   "description": "include lots of vegetables"
 }
 
-### Detete TASK By ID
-DELETE http://localhost:3000/tasks/12345
+### Delete TASK By ID
+DELETE http://localhost:3000/tasks/2779a139-0152-4628-9801-0e32f60371ae
 
 ### Patch TASK By ID
-PATCH http://localhost:3000/tasks/d2eba71d-4b6e-4af0-af08-5c668e3f4a65/status
+PATCH http://localhost:3000/tasks/15f385c7-4bab-4a12-82b5-417640c3e2d2/status
 Content-Type: application/json
 
 {
-  "status": "IN_PROGRESS"
+  "status": "DONE"
 }
