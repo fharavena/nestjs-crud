@@ -16,8 +16,6 @@ export class TaskRepository extends Repository<Task> {
   }
 
   async findById(filterDto: GetTasksFilterDto): Promise<Task[]> {
-    console.log('filterDto', filterDto);
-
     const { status, search } = filterDto;
 
     const query = this.createQueryBuilder('task');

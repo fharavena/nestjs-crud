@@ -15,3 +15,10 @@ Content-Type: application/json
   "username": "usuario13",
   "password": "Contrasenia1"
 }
+
+### test
+
+# header with bearer token
+
+POST http://localhost:3000/auth/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8xMyIsImlhdCI6MTY2NjA2MTgzNywiZXhwIjoxNjY2MDY1NDM3fQ.HqnyT4caZO2D5bGzguxuWu99disEdX4WFPsL2hVAfhE
