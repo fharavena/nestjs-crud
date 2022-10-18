@@ -1,24 +1,27 @@
 ### GET ALL TASKS
 GET http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8yIiwiaWF0IjoxNjY2MDY2NjY3LCJleHAiOjE2NjYwNzAyNjd9.SRBm3HAUbsS_Fr_f7ji-MjGAgbM4KdyXXih4t6O3Ytg
 
 ### GET ALL TASKS with filters status
 GET http://localhost:3000/tasks?status=OPEN
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8xMyIsImlhdCI6MTY2NjA2MjQ4MiwiZXhwIjoxNjY2MDY2MDgyfQ.daGUYS3otPA8z4D9Mg-arJrIsPkhyLmOstI0Klw5ebI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8xIiwiaWF0IjoxNjY2MDY1ODQzLCJleHAiOjE2NjYwNjk0NDN9.VHVPo8k41qYhQ8HexMEn6GOL6XG9ErhaF8MjNoQlcf8
 
 ### GET ALL TASKS with both filters
 GET http://localhost:3000/tasks?status=OPEN&search=email
 
 ### GET TASK By ID
-GET http://localhost:3000/tasks/ab67d658-2257-44ae-bfa8-a6709be3d7f6
+GET http://localhost:3000/tasks/f2dd2b2c-af75-4fe6-8964-154610866e78
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8xIiwiaWF0IjoxNjY2MDY3MzU2LCJleHAiOjE2NjYwNzA5NTZ9.8Mnbh8pKHUD3pt91mzPsFg2GbwjBFsb1xST9-BIvrCk
 
 ### POST TASK
 POST http://localhost:3000/tasks
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8yIiwiaWF0IjoxNjY2MDY2NDYwLCJleHAiOjE2NjYwNzAwNjB9.AoMmh3eeW606oEkHUOUkcxSwDNMQE1QNrp3aEcyjbkU
 
 {
-  "title": "User name",
-  "description": "User email",
-  "banana": "User email"
+  "title": "task for two",
+  "description": "task for two",
+  "banana": "task for two"
 }
 
 ### POST TASK
