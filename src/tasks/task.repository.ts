@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/auth/user.entity';
 import { Repository } from 'typeorm';
@@ -45,8 +45,12 @@ export class TaskRepository extends Repository<Task> {
         }". Filters: ${JSON.stringify(filterDto)}`,
         error.stack,
       );
-      throw InternnalServerErrorException();
+      throw new InternalServerErrorException();
     }
+  }
+
+  getTasks(filterDto: GetTasksFilterDto, user: User): Promise<Task[]> {
+    return this.findById(filterDto, user);
   }
 
   async createTask(createTaskDto: CreateTaskDto, user: User): Promise<Task> {
@@ -62,7 +66,4 @@ export class TaskRepository extends Repository<Task> {
     await this.save(task);
     return task;
   }
-}
-function InternnalServerErrorException() {
-  throw new Error('Function not implemented.');
 }
